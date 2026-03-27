@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculadora con Fetch</title>
+</head>
+<body>
+  <h1>Suma de dos números en el Servidor</h1>
+  
+  <label>Número 1:</label>
+  <input type="number" id="cajaNum1" placeholder="0">
+  <br><br>
+  
+  <label>Número 2:</label>
+  <input type="number" id="cajaNum2" placeholder="0">
+  <br><br>
+
+  <button onclick="enviarSuma()">Calcular Suma</button>
+  
+  <h2 id="textoResultado" style="color: blue;"></h2>
+  
+  <script>
+    function enviarSuma() {
+      // 1. Capturamos los valores
+      const val1 = document.getElementById('cajaNum1').value;
+      const val2 = document.getElementById('cajaNum2').value;
+
+      // 2. Enviamos al backend
+      fetch('http://localhost:3000/sumar', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          numero1: val1,
+          numero2: val2
+        })
+      })
+      .then(res => res.json())
+      .then(data => {
+        // 3. Mostramos el resultado en la consola y en la pantalla
+        console.log("Respuesta del servidor:", data);
+        document.getElementById('textoResultado').innerText = "El resultado es: " + data.resultado;
+      });
+    }
+  </script>
+</body>
+</html>
