@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Aplicación web para cargar y mostrar productos desde una API externa."
+    />
+    <title>Lista de Productos</title>
+    <!-- Bootstrap CSS local -->
+    <link rel="stylesheet" href="/css/bootstrap.css" />
+    <style>
+      body {
+        background-color: #f0f2f5;
+      }
+      .hero {
+        background: linear-gradient(135deg, #0d6efd 0%, #6610f2 100%);
+        color: #fff;
+        padding: 3rem 1rem 2rem;
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+      .product-card {
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        border: none;
+        border-radius: 12px;
+      }
+      .product-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12) !important;
+      }
+      .product-name {
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: #343a40;
+      }
+      #btn-cargar {
+        font-size: 1.1rem;
+        padding: 0.65rem 2.5rem;
+        border-radius: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Hero / Header -->
+    <header class="hero">
+      <h1 class="fw-bold mb-2">🛒 Lista de Productos</h1>
+      <p class="lead mb-4 opacity-75">
+        Datos obtenidos en tiempo real desde una API externa
+      </p>
+      <button id="btn-cargar" class="btn btn-light fw-semibold">
+        Cargar productos
+      </button>
+    </header>
+
+    <!-- Main content -->
+    <main class="container pb-5">
+      <!-- Status message -->
+      <div id="mensaje-estado" class="alert alert-info d-none" role="alert"></div>
+
+      <!-- Products grid -->
+      <div id="lista-productos" class="row g-3"></div>
+    </main>
+
+    <!-- Axios (CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- App JS -->
+    <script src="/js/app.js"></script>
+  </body>
+</html>
