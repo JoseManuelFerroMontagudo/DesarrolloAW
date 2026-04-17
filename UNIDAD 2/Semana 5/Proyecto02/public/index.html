@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>API propia</title>
+</head>
+<body>
+    <h1>Usuario desde API propia</h1>
+    <button onclick="obtenerUsuario()">Cargar usuario</button>
+    <p id="resultado"></p>
+
+    <script>
+        async function obtenerUsuario() {
+            const res = await fetch("http://localhost:3000/usuario");
+            const data = await res.json();
+            document.getElementById("resultado").textContent = "Usuario: " + data.nombre;
+        }
+    </script>
+</body>
+</html>
