@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Sistema de Pedidos</h1>
+    <input id="nombre" placeholder="Producto">
+    <input id="precio" type="number" placeholder="Precio">
+    <button id="add">Agregar producto</button>
+    <hr>
+    <select id="tipo">
+        <option value="normal">Normal</option>
+        <option value="descuento">Con descuento (10%)</option>
+        <option value="express">Express (+50)</option>
+    </select>
+    <button id="calcular">Calcular total</button>
+    <h2>Productos</h2>
+    <ul id="lista"></ul>
+    <h2 id="total"></h2>
+
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>
