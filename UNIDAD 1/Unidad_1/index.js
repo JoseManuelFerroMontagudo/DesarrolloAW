@@ -11,7 +11,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // API route: fetch products from external API
 app.get('/api/productos', async (req, res) => {
   try {
-    const response = await axios.get('https://dummyjson.com/products');
+    const response = await axios.get('https://dummyjson.com/pr<oducts');
     const productos = response.data.products.map((p) => ({
       id: p.id,
       nombre: p.title,
