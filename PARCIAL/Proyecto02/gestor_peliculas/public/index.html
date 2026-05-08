@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Gestor de películas: registra, visualiza y elimina películas de tu catálogo personal." />
+  <title>Gestor de Películas</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header>
+    <h1>🎬 Gestor de Películas</h1>
+    <p class="subtitle">Tu catálogo personal de cine</p>
+  </header>
+
+  <main>
+
+    <!-- ── Formulario para agregar película ──────────────────────────────── -->
+    <section class="form-section">
+      <h2>Agregar película</h2>
+      <form id="movieForm">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="title">Título</label>
+            <input id="title" type="text" placeholder="Ej: Inception" required />
+          </div>
+          <div class="form-group">
+            <label for="genre">Género</label>
+            <input id="genre" type="text" placeholder="Ej: Ciencia ficción" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="director">Director</label>
+            <input id="director" type="text" placeholder="Ej: Christopher Nolan" required />
+          </div>
+          <div class="form-group">
+            <label for="year">Año</label>
+            <input id="year" type="number" placeholder="Ej: 2010" min="1900" max="2099" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="score">Puntaje (0–10)</label>
+            <input id="score" type="number" placeholder="Ej: 8.8" min="0" max="10" step="0.1" />
+          </div>
+          <div class="form-group form-check">
+            <label>
+              <input id="watched" type="checkbox" />
+              Película vista
+            </label>
+          </div>
+        </div>
+
+        <button type="submit" id="submitBtn">➕ Agregar película</button>
+      </form>
+    </section>
+
+    <!-- ── Catálogo de películas ──────────────────────────────────────────── -->
+    <section class="catalog-section">
+      <div class="catalog-header">
+        <h2>Catálogo</h2>
+        <span id="movieCount" class="movie-count">0 películas</span>
+      </div>
+      <div id="moviesContainer"></div>
+    </section>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

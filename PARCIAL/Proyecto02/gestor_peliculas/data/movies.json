@@ -1,0 +1,38 @@
+[
+  {
+    "id": 2,
+    "title": "El padrino",
+    "genre": "Drama / Crimen",
+    "director": "Francis Ford Coppola",
+    "year": 1972,
+    "score": 9.2,
+    "watched": true
+  },
+  {
+    "id": 3,
+    "title": "Inception",
+    "genre": "Acción / Sci-Fi",
+    "director": "Christopher Nolan",
+    "year": 2010,
+    "score": 8.8,
+    "watched": true
+  },
+  {
+    "id": 4,
+    "title": "Parasite",
+    "genre": "Thriller",
+    "director": "Bong Joon-ho",
+    "year": 2019,
+    "score": 8.6,
+    "watched": false
+  },
+  {
+    "id": 5,
+    "title": "Your Name",
+    "genre": "Animación / Romance",
+    "director": "Makoto Shinkai",
+    "year": 2016,
+    "score": 8.4,
+    "watched": false
+  }
+]
