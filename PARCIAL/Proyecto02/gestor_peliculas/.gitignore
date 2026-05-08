@@ -1,1 +1,4 @@
 node_modules/
+NodeModules/
+.env
+.DS_Store
